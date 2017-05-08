@@ -34,6 +34,10 @@ class OverrideFinals extends  WithFinals {
 
 public class Ex20 {
     public static void main(String[] args) {
+
+        WithFinals wf = new WithFinals();
+//        wf.f();
+//        wf.g();
         System.out.println("nothing to see here ...");
     }
 }
