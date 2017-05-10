@@ -9,6 +9,7 @@ import java.util.*;
 class Shape {
     public void draw(){};
     public void erase(){};
+    public void printMessage() { System.out.println("I am your father."); }
 }
 
 class Circle extends Shape {
@@ -17,6 +18,9 @@ class Circle extends Shape {
 
     @Override
     public void erase() { System.out.println("Circle die."); }
+
+    @Override
+    public void printMessage() { System.out.println("Circle daughter."); }
 }
 
 class Triangle extends Shape {
@@ -36,7 +40,7 @@ class Square extends Shape {
     public void erase() { System.out.println("Square die."); }
 }
 
-class RandomeShapeGenerator {
+class RandomShapeGenerator {
     private Random rand = new Random(42);
 
     public Shape next() {
@@ -51,7 +55,7 @@ class RandomeShapeGenerator {
 
 public class Ex2 {
 
-    private static RandomeShapeGenerator generator = new RandomeShapeGenerator();
+    private static RandomShapeGenerator generator = new RandomShapeGenerator();
 
     public static void main(String[] args) {
 
@@ -63,6 +67,7 @@ public class Ex2 {
 
         for (Shape s: shapes) {
             s.draw();
+            s.printMessage();
         }
 
     }
