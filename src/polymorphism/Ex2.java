@@ -40,15 +40,27 @@ class Square extends Shape {
     public void erase() { System.out.println("Square die."); }
 }
 
+class Rectangle extends Shape {
+    @Override
+    public void draw() { System.out.println("Rectangle! Not Wreck-Tangle"); }
+
+    @Override
+    public void erase() { System.out.println("Rectangle die."); }
+
+    @Override
+    public void printMessage() { System.out.println("Rectangle son."); }
+}
+
 class RandomShapeGenerator {
     private Random rand = new Random(42);
 
     public Shape next() {
-        switch (rand.nextInt(3)) {
+        switch (rand.nextInt(4)) {
             default:
             case (0): return new Circle();
             case (1): return new Triangle();
             case (2): return new Square();
+            case (3): return new Rectangle();
         }
     }
 }
