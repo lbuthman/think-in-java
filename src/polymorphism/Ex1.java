@@ -6,28 +6,32 @@ package src.polymorphism;
 
 class Cycle {
     public void ride() {
-        System.out.println("Rolling down the street");
+        System.out.println("Rolling down the street on " + wheels(1) + " wheel(s).");
+    }
+
+    public int wheels(int n) {
+        return n;
     }
 }
 
 class Unicycle extends Cycle {
     //override ride method
     public void ride() {
-        System.out.println("Rolling down the street on my unicycle.");
+        System.out.println("Rolling down the street on " + wheels(1) + " wheel unicycle.");
     }
 }
 
 class Bicycle extends Cycle {
     //override ride method
     public void ride() {
-        System.out.println("Rolling down the street on my bicycle.");
+        System.out.println("Rolling down the street on " + wheels(2) + " wheel bicycle.");
     }
 }
 
 class Tricycle extends Cycle {
     //override ride method
     public void ride() {
-        System.out.println("Rolling down the street on my tricycle.");
+        System.out.println("Rolling down the street on " + wheels(3) + " wheel tricycle.");
     }
 }
 
