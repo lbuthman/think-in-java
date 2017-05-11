@@ -1,5 +1,7 @@
 package src.polymorphism;
 
+import java.util.*;
+
 /**
  * Created by lbuthman on 5/11/17.
  */
@@ -98,7 +100,27 @@ class Keyboard extends Instrument {
 
 //Should be new files in package//
 
+class RandomInstrumentGenerator {
+
+    private Random random = new Random(42);
+
+    public Instrument next() {
+        switch (random.nextInt(6)) {
+            default:
+            case (0): return new Wind();
+            case (1): return new Percussion();
+            case (2): return new Stringed();
+            case (3): return new Brass();
+            case (4): return new Woodwind();
+            case (5): return new Keyboard();
+        }
+    }
+}
+
 public class Ex6Music {
+
+    private static RandomInstrumentGenerator generator = new RandomInstrumentGenerator();
+
     public static void tune(Instrument instrument) {
         instrument.play(Note.MIDDLE_C);
     }
@@ -112,14 +134,11 @@ public class Ex6Music {
 
     public static void main(String[] args) {
 
-        Instrument[] orchestra = {
-                new Wind(),
-                new Percussion(),
-                new Stringed(),
-                new Brass(),
-                new Woodwind(),
-                new Keyboard()
-        };
+        Instrument[] orchestra = new Instrument[20];
+
+        for (int i=0; i<orchestra.length; i++) {
+            orchestra[i] = generator.next();
+        }
 
         tuneAll(orchestra);
     }
