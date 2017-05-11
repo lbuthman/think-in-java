@@ -98,7 +98,7 @@ class Keyboard extends Instrument {
 
 //Should be new files in package//
 
-public class Ex3Music {
+public class Ex5Music {
     public static void tune(Instrument instrument) {
         instrument.play(Note.MIDDLE_C);
     }
