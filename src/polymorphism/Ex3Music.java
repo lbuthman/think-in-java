@@ -87,7 +87,14 @@ class Woodwind extends Instrument {
     }
 }
 
-
+class Keyboard extends Instrument {
+    void play(Note note) {
+        System.out.println("Keyboard.play()" + note);
+    }
+    String what() {
+        return "Keyboard";
+    }
+}
 
 //Should be new files in package//
 
@@ -111,7 +118,7 @@ public class Ex3Music {
                 new Stringed(),
                 new Brass(),
                 new Woodwind(),
-
+                new Keyboard()
         };
 
         tuneAll(orchestra);
