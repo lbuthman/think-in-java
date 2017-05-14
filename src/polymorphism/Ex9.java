@@ -7,6 +7,11 @@ import java.util.*;
  */
 
 class Rodent {
+
+    public Rodent() {
+        System.out.println("Rodent #1");
+    }
+
     void run() {
         System.out.println("All rodents run.s");
     }
@@ -16,6 +21,9 @@ class Rodent {
 }
 
 class Mouse extends Rodent {
+    public Mouse() {
+        System.out.println("Mouse #2");
+    }
     @Override
     void run() {
         System.out.println("Mouse: quickly scampers");
@@ -27,6 +35,9 @@ class Mouse extends Rodent {
 }
 
 class Gerbil extends Rodent {
+    public Gerbil() {
+        System.out.println("Gerbil #3");
+    }
     @Override
     void run() {
         System.out.println("Gerbil: scratches through plastic obstacles");
@@ -38,6 +49,9 @@ class Gerbil extends Rodent {
 }
 
 class Hamster extends Rodent {
+    public Hamster() {
+        System.out.println("Hamster #4");
+    }
     @Override
     void run() {
         System.out.println("Hamster: runs very fast but goes no where, damn wheel.");
@@ -75,7 +89,7 @@ public class Ex9 {
 
     public static void main(String[] args) {
 
-        Rodent[] rodents = new Rodent[10];
+        Rodent[] rodents = new Rodent[4];
 
         for (int i=0; i<rodents.length; i++) {
             rodents[i] = generator.next();
