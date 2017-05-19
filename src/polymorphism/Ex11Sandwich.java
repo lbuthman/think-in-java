@@ -34,14 +34,29 @@ class PortableLunch extends Lunch {
     public PortableLunch() {System.out.println("Portable Lunch()");}
 }
 
-public class Ex11Sandwich extends PortableLunch {
+interface FastFood {
+    void pickup();
+    void driveThrough();
+}
+
+public class Ex11Sandwich extends PortableLunch implements FastFood {
     Bread bread = new Bread();
     Cheese cheese = new Cheese();
     Lettuce lettuce = new Lettuce();
     Pickle pickle = new Pickle();
     public Ex11Sandwich() {System.out.println("Ex11Sandwich()");}
 
+    public void pickup() {
+        System.out.println("Here is your Hamburger Sandwich.");
+    }
+
+    public void driveThrough() {
+        System.out.println("Please pull around.");
+    }
+
     public static void main(String[] args) {
-        new Ex11Sandwich();
+        Ex11Sandwich sandwich = new Ex11Sandwich();
+        sandwich.driveThrough();
+        sandwich.pickup();
     }
 }
