@@ -6,58 +6,50 @@ import java.util.*;
  * Created by lbuthman on 5/11/17.
  */
 
-class Rodent {
+interface Rodent {
 
-    public Rodent() {
-        System.out.println("Rodent #1");
-    }
-
-    void run() {
-        System.out.println("All rodents run.s");
-    }
-    void eat() {
-        System.out.println("All rodents eat.");
-    }
+    void run();
+    void eat();
 }
 
-class Mouse extends Rodent {
+class Mouse implements Rodent {
     public Mouse() {
         System.out.println("Mouse #2");
     }
     @Override
-    void run() {
+    public void run() {
         System.out.println("Mouse: quickly scampers");
     }
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("<nibble nibble nibble>");
     }
 }
 
-class Gerbil extends Rodent {
+class Gerbil implements Rodent {
     public Gerbil() {
         System.out.println("Gerbil #3");
     }
     @Override
-    void run() {
+    public void run() {
         System.out.println("Gerbil: scratches through plastic obstacles");
     }
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("<chomps at tasty nuggets>");
     }
 }
 
-class Hamster extends Rodent {
+class Hamster implements Rodent {
     public Hamster() {
         System.out.println("Hamster #4");
     }
     @Override
-    void run() {
+    public void run() {
         System.out.println("Hamster: runs very fast but goes no where, damn wheel.");
     }
     @Override
-    void eat() {
+    public void eat() {
         System.out.println("<slowly savors the delicious lobster>");
     }
 }
