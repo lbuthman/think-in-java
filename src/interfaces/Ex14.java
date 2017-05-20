@@ -23,7 +23,7 @@ interface Sense extends Mouth, Eyes, Ears {
     void detect();
 }
 
-class Person {
+abstract class Person {
     String type;
     public Person(String type) {
         this.type = type;
