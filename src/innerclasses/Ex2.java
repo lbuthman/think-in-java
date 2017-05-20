@@ -17,6 +17,8 @@ public class Ex2 {
 
     public Ex2(int size) { words = new String[size]; }
 
+    void wild() { System.out.println("This is wild.");}
+
     public void add(String s) {
         if (next < words.length) {
             words[next++] = s;
@@ -47,9 +49,13 @@ public class Ex2 {
                 i++;
             }
         }
+
+        public Ex2 outer() {
+            return Ex2.this;
+        }
     }
 
-    public Selector selector() {
+    public StringSelector selector() {
         return new StringSelector();
     }
 
@@ -60,7 +66,9 @@ public class Ex2 {
             ex2.add(Integer.toString(i));
         }
 
-        Selector selector = ex2.selector();
+        StringSelector selector = ex2.selector();
+
+        selector.outer().wild();
 
         while (!selector.end()) {
             System.out.println(selector.current() + " " + ex2.toString());
