@@ -9,24 +9,18 @@ interface Shoe {
 }
 
 class Foot {
-    public Shoe prepare(boolean ready) {
-        if (ready) {
-            class Gear implements Shoe {
-                public void tie() {
-                    System.out.println("Shoe geared tied on foot.");
+    public Shoe prepare(final boolean ready) {
 
+        return new Shoe() {
+
+            public void tie() {
+                if (ready) {
+                    System.out.println("Shoe tied. Let's do this!");
+                } else {
+                    System.out.println("Where is my shoe???");
                 }
             }
-            return new Gear();
-        } else {
-            class Gear implements Shoe {
-                public void tie() {
-                    System.out.println("Hurry up! We need to go!");
-
-                }
-            }
-            return new Gear();
-        }
+        };
 
     }
 }
