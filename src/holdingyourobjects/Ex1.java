@@ -1,6 +1,7 @@
 package src.holdingyourobjects;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 /**
  * Created by lbuthman on 5/21/17.
@@ -23,7 +24,10 @@ public class Ex1 {
         gerbils.add(new Gerbil(111));
         gerbils.add(new Gerbil(72634));
 
-        for (Gerbil g: gerbils) {
+        Iterator<Gerbil> it = gerbils.iterator();
+
+        while (it.hasNext()) {
+            Gerbil g = it.next();
             g.hop();
         }
     }
