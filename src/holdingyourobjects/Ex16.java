@@ -25,7 +25,7 @@ public class Ex16 {
             int localVowels = 0;
             for (String vowel: vowelSet) {
                 for (int i=0; i<word.length(); i++) {
-                    if (word.substring(i, i + 1).toLowerCase().contentEquals(vowel)) {
+                    if (vowel.contains(word.substring(i, i + 1).toLowerCase())) {
                         localVowels++;
                         totalVowels++;
                     }
