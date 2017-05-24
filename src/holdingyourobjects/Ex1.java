@@ -1,6 +1,6 @@
 package src.holdingyourobjects;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 
 /**
@@ -19,15 +19,15 @@ class Gerbil {
 
 public class Ex1 {
     public static void main(String[] args) {
-        ArrayList<Gerbil> gerbils = new ArrayList<>();
-        gerbils.add(new Gerbil(42));
-        gerbils.add(new Gerbil(111));
-        gerbils.add(new Gerbil(72634));
+        HashMap<String,Gerbil> gerbils = new HashMap<>();
+        gerbils.put("fuzzy", new Gerbil(42));
+        gerbils.put("goofy", new Gerbil(111));
+        gerbils.put("slappy", new Gerbil(72634));
 
-        Iterator<Gerbil> it = gerbils.iterator();
+        Iterator<String> it = gerbils.keySet().iterator();
 
         while (it.hasNext()) {
-            Gerbil g = it.next();
+            Gerbil g = gerbils.get(it.next());
             g.hop();
         }
     }
