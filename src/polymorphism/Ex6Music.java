@@ -111,8 +111,8 @@ class RandomInstrumentGenerator {
             case (1): return new Percussion();
             case (2): return new Stringed();
             case (3): return new Brass();
-            case (4): return new Woodwind();
-            case (5): return new Keyboard();
+            case (5): return new Woodwind();
+            case (6): return new Keyboard();
         }
     }
 }

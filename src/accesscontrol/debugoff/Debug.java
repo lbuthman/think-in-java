@@ -1,4 +1,4 @@
-package accesscontrol.debugoff;
+package src.accesscontrol.debugoff;
 
 /**
  * Created by lbuthman on 3/26/17.

@@ -1,4 +1,4 @@
-package initializationandcleanup;
+package src.initializationandcleanup;
 
 /**
  * Created by lbuthman on 3/22/17.

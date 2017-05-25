@@ -1,0 +1,6 @@
+Finished with exercises for now. They are not too meaningful to me because they sometimes
+come across as arbitrary. I don't feel like I'm making the connection between the concept
+and how it is useful. This is how I understand it now and reserve the right to change my
+mind at any future time :)
+
+The value I see now for this book is as a reference for deep understandings of the language.
