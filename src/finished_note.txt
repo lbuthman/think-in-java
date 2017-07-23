@@ -1,3 +1,8 @@
+7-23-17 -- new edition does not have exercises. Instead, I am refactoring what I believe to
+be dirty code. This allows me to improve my style and better understand the unclear examples
+used in the book.
+
+------------------------------------------------------------------------
 Finished with exercises for now. They are not too meaningful to me because they sometimes
 come across as arbitrary. I don't feel like I'm making the connection between the concept
 and how it is useful. This is how I understand it now and reserve the right to change my
